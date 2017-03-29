@@ -1,78 +1,78 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-        <loc>http://localhost:4000</loc>
+        <loc>/Notepad</loc>
     </url>
     
     
     <url>
-        <loc>http://localhost:4000/404</loc>
+        <loc>/Notepad/404</loc>
     </url>
     
     <url>
-        <loc>http://localhost:4000/about/index.html</loc>
+        <loc>/Notepad/about/index.html</loc>
     </url>
     
     <url>
-        <loc>http://localhost:4000/categories/index.html</loc>
+        <loc>/Notepad/categories/index.html</loc>
     </url>
     
     <url>
-        <loc>http://localhost:4000/featured/</loc>
+        <loc>/Notepad/featured/</loc>
     </url>
     
     <url>
-        <loc>http://localhost:4000/feed.xml</loc>
+        <loc>/Notepad/feed.xml</loc>
     </url>
     
     <url>
-        <loc>http://localhost:4000/</loc>
+        <loc>/Notepad/</loc>
     </url>
     
     <url>
-        <loc>http://localhost:4000/links.jsonp</loc>
+        <loc>/Notepad/links.jsonp</loc>
     </url>
     
     <url>
-        <loc>http://localhost:4000/search.json</loc>
+        <loc>/Notepad/search.json</loc>
     </url>
     
     <url>
-        <loc>http://localhost:4000/sitemap.xml</loc>
+        <loc>/Notepad/sitemap.xml</loc>
     </url>
     
     <url>
-        <loc>http://localhost:4000/tags/index.html</loc>
+        <loc>/Notepad/tags/index.html</loc>
     </url>
     
     <url>
-        <loc>http://localhost:4000/page2/</loc>
+        <loc>/Notepad/page2/</loc>
     </url>
     
 
     
     <url>
-        <loc>http://localhost:4000/webdevelopment/why-jekyll</loc>
+        <loc>/Notepad/webdevelopment/why-jekyll</loc>
     </url>
     
     <url>
-        <loc>http://localhost:4000/personal/introducing-notepad</loc>
+        <loc>/Notepad/personal/introducing-notepad</loc>
     </url>
     
     <url>
-        <loc>http://localhost:4000/theme/documentation</loc>
+        <loc>/Notepad/theme/documentation</loc>
     </url>
     
     <url>
-        <loc>http://localhost:4000/theme/readability-feature-post</loc>
+        <loc>/Notepad/theme/readability-feature-post</loc>
     </url>
     
     <url>
-        <loc>http://localhost:4000/articles/readability-post</loc>
+        <loc>/Notepad/articles/readability-post</loc>
     </url>
     
     <url>
-        <loc>http://localhost:4000/articles/theme-elements</loc>
+        <loc>/Notepad/articles/theme-elements</loc>
     </url>
     
 </urlset>

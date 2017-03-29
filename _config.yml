@@ -71,8 +71,8 @@ kramdown:
 
 prose:
   rooturl: '_posts'
-  siteurl: 'http://hmfaysal.github.io/Notepad/'
-  relativeLinks: 'http://hmfaysal.github.io/Notepad/links.jsonp'
+  siteurl: 'http://nurigo.github.io/'
+  relativeLinks: 'http://nurigo.github.io/'
   media: 'images'
   metadata:
     _posts:
