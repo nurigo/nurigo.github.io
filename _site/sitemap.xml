@@ -45,34 +45,10 @@
         <loc>http://localhost:4000/tags/index.html</loc>
     </url>
     
-    <url>
-        <loc>http://localhost:4000/page2/</loc>
-    </url>
-    
 
     
     <url>
-        <loc>http://localhost:4000/webdevelopment/why-jekyll</loc>
-    </url>
-    
-    <url>
-        <loc>http://localhost:4000/personal/introducing-notepad</loc>
-    </url>
-    
-    <url>
-        <loc>http://localhost:4000/theme/documentation</loc>
-    </url>
-    
-    <url>
-        <loc>http://localhost:4000/theme/readability-feature-post</loc>
-    </url>
-    
-    <url>
-        <loc>http://localhost:4000/articles/readability-post</loc>
-    </url>
-    
-    <url>
-        <loc>http://localhost:4000/articles/theme-elements</loc>
+        <loc>http://localhost:4000/articles/how-to-make-posts</loc>
     </url>
     
 </urlset>

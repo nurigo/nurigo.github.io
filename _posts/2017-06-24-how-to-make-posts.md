@@ -1,8 +1,8 @@
 ---
 layout: post
-title: Theme Elements
-description: "Just about everything you'll need to style in the theme: headings, paragraphs, blockquotes, tables, code blocks, and more."
-modified: 2013-05-31
+title: 블로그 사용방법
+description: "이 페이지는 블로그의 작성방법에 대한 내용을 담고 있습니다."
+modified: 2017-06-24
 category: articles
 tags: [sample post]
 imagefeature: cover6.jpg
@@ -10,6 +10,10 @@ comments: true
 share: true
 ---
 
+해당 페이지에서는 기술 페이지에 포스트를 작성시에 알아야할 markdown 의 사용법에 대하여 설명하고 있습니다. 
+
+
+----- 아래부터는 원본 내용 그대로 두었습니다. ----- 
 Below is just about everything you'll need to style in the theme. Check the source code to see the many embedded elements within paragraphs.
 
 # Heading 1
