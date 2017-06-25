@@ -48,6 +48,10 @@
 
     
     <url>
+        <loc>http://localhost:4000/articles/testing_post</loc>
+    </url>
+    
+    <url>
         <loc>http://localhost:4000/articles/how-to-make-posts</loc>
     </url>
     

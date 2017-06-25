@@ -1,0 +1,22 @@
+# Author details.
+billy_kang: 
+  name: Billy Kang
+  display_name: 빌리
+  description: "javascript 좀 잘하고 싶다"
+  avatar: billy.jpg
+  email: billy@nurigo.net
+  facebook: https://www.facebook.com/hyunseo.kang.9
+  github: https://github.com/kang85
+nurigo:
+  name:           Nurigo
+  display_name:   누리고
+  avatar:         nurigo_logo.jpg
+  email:          contact@nurigo.net
+  description:    개발자가 행복한 회사
+  # Social networking links used in footer. Update and remove as you like.
+  # twitter:        hmfaysal
+  # facebook:       hmfaysal
+  # github:         hmfaysal      
+  # instagram:      hmfaysal
+  # For Google Authorship https://plus.google.com/authorship
+  # google_plus:    https://plus.google.com/u/0/102602916593522619858

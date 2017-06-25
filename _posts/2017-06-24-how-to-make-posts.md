@@ -1,7 +1,8 @@
 ---
 layout: post
 title: 블로그 사용방법
-description: "이 페이지는 블로그의 작성방법에 대한 내용을 담고 있습니다."
+description: "이 페이지는 블로그 포스팅 작성방법에 대한 내용을 담고 있습니다."
+author: nurigo
 modified: 2017-06-24
 category: articles
 tags: [sample post]
@@ -10,10 +11,13 @@ comments: true
 share: true
 ---
 
-해당 페이지에서는 기술 페이지에 포스트를 작성시에 알아야할 markdown 의 사용법에 대하여 설명하고 있습니다. 
+해당 페이지에서는 기술 페이지에 포스트를 작성시에 알아야할 markdown 의 사용법에 대하여 설명하고 있습니다. (그냥 기본 markdown에서 별로 크게 다르지 않은듯)
 
 
 ----- 아래부터는 원본 내용 그대로 두었습니다. ----- 
+
+
+
 Below is just about everything you'll need to style in the theme. Check the source code to see the many embedded elements within paragraphs.
 
 # Heading 1

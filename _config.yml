@@ -1,5 +1,5 @@
-title:            개발자가 행복한 기업
-description:      누리고 기술블로그
+title:            nurigo 기술 블로그
+description:      개발자가 행복한 기업
 logo:             nurigo_logo-96x96.png
 disqus_shortname: nurigo
 share:            true
@@ -9,20 +9,6 @@ dropcap:			true
 # whether working locally or remotely. Start Jekyll with: jekyll serve --baseurl ''
 url:        	  ../
 
-# Owner/author information
-owner:
-  name:           Nurigo
-  avatar:         nurigo_logo.jpg
-  email:          contact@nurigo.net
-  # Use the coder's toolbox at http://coderstoolbox.net/string/#!encoding=xml&action=encode&charset=us_ascii to encode your description into XML string
-  description:    (주)누리고의 기술블로그입니다. 
-  # Social networking links used in footer. Update and remove as you like.
-  # twitter:        hmfaysal
-  # facebook:       hmfaysal
-  # github:         hmfaysal      
-  # instagram:      hmfaysal
-  # For Google Authorship https://plus.google.com/authorship
-  # google_plus:    https://plus.google.com/u/0/102602916593522619858
 
 # Analytics and webmaster tools stuff goes here
 # google_analytics:   UA-39365944-7

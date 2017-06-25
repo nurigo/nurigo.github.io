@@ -3,6 +3,11 @@ callback([
   {
     "text": "블로그 사용방법",
     "href": "http://localhost:4000/articles/how-to-make-posts"
+  } ,
+
+  {
+    "text": "테스트 포스트",
+    "href": "http://localhost:4000/articles/testing_post"
   } 
 
 ])

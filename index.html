@@ -1,12 +1,14 @@
 ---
 layout: home
-title: BLOG
-description: "The personal blog of Hossain Mohd. Faysal, a doctoral candidate in Electrical Engineering at University of Pennsylvania."
+title: 
+description: 
 headline: An Engineer's Diary
-tags: [Hossain, Mohd, Faysal, electrical, engineering, blog, university, pennsylvania, doha, Qatar]
+tags: [ nurigo ]
 ---
 {% if site.paginate %}
 	{% for post in paginator.posts %}
+
+    {% assign author = site.data.authors[post.author] %}
     <article class="notepad-index-post post row">
         <div class="small-12 medium-3 large-2 columns datetime">
             <span class="notepad-post-meta">
@@ -19,6 +21,8 @@ tags: [Hossain, Mohd, Faysal, electrical, engineering, blog, university, pennsyl
                     </span>
                 </time>
             </span>
+            <p> <img src="{{site.url}}/images/{{ author.avatar }}" class="notepad-post-author-avatar" alt="{{ author.name }}'s photo"> </p>
+            <p> Posted by {{ author.display_name }} </p>
         </div>
         <div class="small-12 medium-9 large-10 columns">
             <header class="notepad-post-header">
@@ -38,6 +42,7 @@ tags: [Hossain, Mohd, Faysal, electrical, engineering, blog, university, pennsyl
                 </div>
             
         </div>
+
     </article>
 	{% endfor %}
     <nav class="pagination" role="navigation">

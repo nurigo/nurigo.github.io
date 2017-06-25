@@ -1,6 +1,14 @@
 [
 	
 		{
+		  "title"      : "테스트 포스트",
+		  "category"   : "articles",
+		  "url"        : "http://localhost:4000/articles/testing_post",
+		  "date"       : "2017-06-25 12:05:00 +0900",
+		  "shortdate"  : "June 25, 2017"
+		} ,
+	
+		{
 		  "title"      : "블로그 사용방법",
 		  "category"   : "articles",
 		  "url"        : "http://localhost:4000/articles/how-to-make-posts",
