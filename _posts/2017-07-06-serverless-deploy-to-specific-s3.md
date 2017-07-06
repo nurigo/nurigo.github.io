@@ -4,7 +4,7 @@ title: 서버리스 deploy를 특정 버킷에 배포하기
 description: "서버리스를 이용한 deploy 시, 임의 bucket 을 생성하여 deploy를 매번 하게 되면, 나중에 bucket 수에 제한에 문제가 됩니다."
 date: 2017-07-06 14:45
 author: billy_kang
-category: [articles, serverless, deploy]
+category: [articles]
 tags: [serverless]
 comments: true
 share: true

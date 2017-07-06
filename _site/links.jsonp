@@ -13,7 +13,7 @@ callback([
 
   {
     "text": "서버리스 deploy를 특정 버킷에 배포하기",
-    "href": "http://localhost:4000/articles/serverless/deploy/serverless-deploy-to-specific-s3"
+    "href": "http://localhost:4000/articles/serverless-deploy-to-specific-s3"
   } 
 
 ])
