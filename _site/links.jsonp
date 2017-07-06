@@ -8,6 +8,11 @@ callback([
   {
     "text": "테스트 포스트",
     "href": "http://localhost:4000/articles/testing_post"
+  } ,
+
+  {
+    "text": "서버리스 deploy를 특정 버킷에 배포하기",
+    "href": "http://localhost:4000/articles/serverless/deploy/serverless_deploy_to_specific_s3.1"
   } 
 
 ])

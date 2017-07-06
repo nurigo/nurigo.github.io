@@ -48,6 +48,10 @@
 
     
     <url>
+        <loc>http://localhost:4000/articles/serverless/deploy/serverless_deploy_to_specific_s3.1</loc>
+    </url>
+    
+    <url>
         <loc>http://localhost:4000/articles/testing_post</loc>
     </url>
     
