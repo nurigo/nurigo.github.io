@@ -1,20 +1,5 @@
 <!DOCTYPE html>
 <html>
-<!--
-====================================================
-    __  ____  ______________  _______ ___    __ 
-   / / / /  |/  / ____/   \ \/ / ___//   |  / / 
-  / /_/ / /|_/ / /_  / /| |\  /\__ \/ /| | / /  
- / __  / /  / / __/ / ___ |/ /___/ / ___ |/ /___
-/_/ /_/_/  /_/_/   /_/  |_/_//____/_/  |_/_____/
-                                                     
-====================================================
-Author: Hossain Mohammad Faysal
-Profile: https://www.facebook.com/hmfaysal
-Version: 1.0
-Description: Awesome dude, awesome life
-====================================================
--->
 <head>
 <meta charset="utf-8">
 <title>서버리스 DEPLOY를 특정 버킷에 배포하기 &vert; NURIGO 기술 블로그</title>
@@ -127,9 +112,8 @@ Description: Awesome dude, awesome life
             </header>
 
         <article class="notepad-post-content post tag-simple">
-            <div><h1 id="serverless-배포시-특정-s3-로-배포하는-방법">Serverless 배포시, 특정 S3 로 배포하는 방법</h1>
+            <div><p>해당 페이지에서는 Serverless 배포시, 특정 S3 로 배포하는 방법에 대하여 설명하고 있습니다.</p>
 
-<p><br /></p>
 <h2 id="짧게-요약">짧게 요약</h2>
 <h4 id="1-s3-에-deploy들를-담을-버킷-생성">1. S3 에 deploy들를 담을 버킷 생성</h4>
 <h4 id="2-project의-serverlessyml-에-deploymentbucket-옵션을-추가">2. project의 serverless.yml 에 deploymentBucket 옵션을 추가</h4>
@@ -141,18 +125,18 @@ Description: Awesome dude, awesome life
 <h2 id="길게-설명">길게 설명</h2>
 
 <h4 id="1-s3-에-deploy들을-담을-버킷-생성합니다">1. S3 에 deploy들을 담을 버킷 생성합니다.</h4>
-
 <blockquote>
+
   <p>테스트로 사용할 버킷을 생성합니다. 저는 “coolsms.billy.projects” 이라는 버킷을 만들었습니다.</p>
 
   <p><img src="/images/serverless_deploy/create_bucket.png" alt="S3버킷생성" title="버킷생성" /></p>
 </blockquote>
 
 <h4 id="2-project-의-serverlessyml-에-deploymentbucket-옵션을-추가">2. Project 의 serverless.yml 에 deploymentBucket 옵션을 추가</h4>
-
 <blockquote>
+
   <p>로컬에서 coolsms.billy.projects 라는 폴더에 serverless 예제로 사용할 Project 를 4개를</p>
-  <pre><code class="language-sh">sls create -t aws-nodejs -n testProject1 -p ./testProject1
+  <pre><code>sls create -t aws-nodejs -n testProject1 -p ./testProject1
 sls create -t aws-nodejs -n testProject2 -p ./testProject2
 sls create -t aws-nodejs -n testProject3 -p ./testProject3
 sls create -t aws-nodejs -n testProject4 -p ./testProject4
@@ -165,7 +149,7 @@ sls create -t aws-nodejs -n testProject4 -p ./testProject4
 <img src="/images/serverless_deploy/ls_projects.png" alt="serverless작업폴더생성" title="serverless작업폴더생성" /></p>
 
   <p>각각의 폴더안에 있는 serverless.yml 을 열어서 아래와 같이 deploymentBucket 을 추가합니다.</p>
-  <pre><code class="language-sh">service: testProject1
+  <pre><code>service: testProject1
 provider:
   name: aws
   region: ap-northeast-2
@@ -178,15 +162,15 @@ functions:
 </blockquote>
 
 <h4 id="3-sls-deploy-1">3. sls deploy</h4>
-
 <blockquote>
+
   <p>각각의 test 프로젝트를 sls deploy 해줍니다. 
 <img src="/images/serverless_deploy/sls_deploy.png" alt="slsdeploy" title="sls_deploy" /></p>
 </blockquote>
 
 <h4 id="4-배포확인">4. 배포확인.</h4>
-
 <blockquote>
+
   <p>S3 의 “coolsms.billy.projects” 버킷으로 가서 배포한 serverless projects 들이 잘 들어가있는지 확인합니다.</p>
 
   <p><img src="/images/serverless_deploy/s3_deploy.png" alt="s3_deploy" title="s3_deploy" /></p>
