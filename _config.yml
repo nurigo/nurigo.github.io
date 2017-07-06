@@ -23,12 +23,12 @@ links:
     url: /
     external: false
     icon: home
-  - title: REST API
+  - title: Featured
     url: /featured
-  - title: AWS
+  - title: Category
     url: /categories
-  - title: 누리고
-    url: /about
+  - title: Authors
+    url: /authors
 
 # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 timezone:    Asia/Seoul
