@@ -3,7 +3,7 @@
 		{
 		  "title"      : "서버리스 deploy를 특정 버킷에 배포하기",
 		  "category"   : "articlesserverlessdeploy",
-		  "url"        : "http://localhost:4000/articles/serverless/deploy/serverless_deploy_to_specific_s3.1",
+		  "url"        : "http://localhost:4000/articles/serverless/deploy/serverless-deploy-to-specific-s3",
 		  "date"       : "2017-07-06 14:45:00 +0900",
 		  "shortdate"  : "July 06, 2017"
 		} ,
