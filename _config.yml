@@ -1,6 +1,6 @@
 title:            nurigo 기술 블로그
 description:      개발자가 행복한 기업
-logo:             nurigo_logo-96x96.png
+logo:             nurigo_logo.png
 disqus_shortname: nurigo
 share:            true
 dropcap:			true
@@ -15,6 +15,12 @@ url:        	  ../
 google_verify:      
 # https://ssl.bing.com/webmaster/configure/verify/ownership Option 2 content= goes here
 bing_verify:         
+
+defaults:
+  - scope: 
+      path: "images"
+    values: 
+      image: true
 
 # Links to include in footer navigation
 # For external links add external: true
