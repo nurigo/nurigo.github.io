@@ -2,18 +2,18 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>테스트 포스트 &vert; NURIGO 기술 블로그</title>
-<meta name="description" content="owner 말고 author를 다른 사람으로 했을때의 post 테스팅입니다. ">
-<meta name="keywords" content="sample post">
+<title>SERVERLESS DEPLOY를 특정 버킷에 배포하기 &vert; NURIGO 기술 블로그</title>
+<meta name="description" content="Serverless를 이용한 deploy 시, 임의 bucket 을 생성하여 deploy를 매번 하게 되면, 나중에 AWS S3 bucket 수에 제한 때문에 문제가 됩니다.">
+<meta name="keywords" content="serverless, deploy, S3, AWS">
 
 
 
 <!-- Open Graph -->
 <meta property="og:locale" content="en_US">
 <meta property="og:type" content="article">
-<meta property="og:title" content="테스트 포스트">
-<meta property="og:description" content="owner 말고 author를 다른 사람으로 했을때의 post 테스팅입니다. ">
-<meta property="og:url" content="http://localhost:4000/articles/testing_post">
+<meta property="og:title" content="Serverless deploy를 특정 버킷에 배포하기">
+<meta property="og:description" content="Serverless를 이용한 deploy 시, 임의 bucket 을 생성하여 deploy를 매번 하게 되면, 나중에 AWS S3 bucket 수에 제한 때문에 문제가 됩니다.">
+<meta property="og:url" content="http://localhost:4000/serverless/serverless-deploy-to-specific-s3">
 <meta property="og:site_name" content="nurigo 기술 블로그">
 <meta property="og:image" content="http://localhost:4000/images/">
 
@@ -21,7 +21,7 @@
 
 
 
-<link rel="canonical" href="http://localhost:4000/articles/testing_post">
+<link rel="canonical" href="http://localhost:4000/serverless/serverless-deploy-to-specific-s3">
 <link href="http://localhost:4000/feed.xml" type="application/atom+xml" rel="alternate" title="nurigo 기술 블로그 Feed">
 
 
@@ -104,15 +104,79 @@
                 <div class="notepad-post-title-simple row">
                     <div class="small-12 columns">
                         <div class="notepad-post-meta-simple">
-                            <h1>테스트 포스트</h1>
-                            <p>by <strong>빌리</strong> &#8212; on <a href="http://localhost:4000/tags/index.html#sample post" data-toggle="tooltip" title="Posts tagged with sample post" rel="tag">sample post</a> <strong><time datetime="2017-06-25T12:05:00+09:00">25 Jun 2017</time></strong></p>
+                            <h1>Serverless deploy를 특정 버킷에 배포하기</h1>
+                            <p>by <strong>빌리</strong> &#8212; on <a href="http://localhost:4000/tags/index.html#serverless" data-toggle="tooltip" title="Posts tagged with serverless" rel="tag">serverless</a>&nbsp;&comma;&nbsp;<a href="http://localhost:4000/tags/index.html#deploy" data-toggle="tooltip" title="Posts tagged with deploy" rel="tag">deploy</a>&nbsp;&comma;&nbsp;<a href="http://localhost:4000/tags/index.html#S3" data-toggle="tooltip" title="Posts tagged with S3" rel="tag">S3</a>&nbsp;&comma;&nbsp;<a href="http://localhost:4000/tags/index.html#AWS" data-toggle="tooltip" title="Posts tagged with AWS" rel="tag">AWS</a> <strong><time datetime="2017-07-06T14:45:00+09:00">06 Jul 2017</time></strong></p>
                         </div>
                     </div>
                 </div>
             </header>
 
         <article class="notepad-post-content post tag-simple">
-            <div><p>해당 페이지에서는 기술 페이지에 포스트를 작성시에 알아야할 markdown 의 사용법에 대하여 설명하고 있습니다.</p>
+            <div><p>해당 페이지에서는 Serverless 배포시, 특정 S3 로 배포하는 방법에 대하여 설명하고 있습니다.</p>
+
+<h2 id="짧게-요약">짧게 요약</h2>
+<h4 id="1-s3-에-deploy들를-담을-버킷-생성">1. S3 에 deploy들를 담을 버킷 생성</h4>
+<h4 id="2-project의-serverlessyml-에-deploymentbucket-옵션을-추가">2. project의 serverless.yml 에 deploymentBucket 옵션을 추가</h4>
+<h4 id="3-sls-deploy">3. sls deploy</h4>
+<h4 id="4-s3-배포확인">4. S3 배포확인</h4>
+<p><br />
+<br /></p>
+
+<h2 id="길게-설명">길게 설명</h2>
+
+<h4 id="1-s3-에-deploy들을-담을-버킷-생성합니다">1. S3 에 deploy들을 담을 버킷 생성합니다.</h4>
+<blockquote>
+
+  <p>테스트로 사용할 버킷을 생성합니다. 저는 “coolsms.billy.projects” 이라는 버킷을 만들었습니다.</p>
+
+  <p><img src="/images/serverless_deploy/create_bucket.png" alt="S3버킷생성" title="버킷생성" /></p>
+</blockquote>
+
+<h4 id="2-project-의-serverlessyml-에-deploymentbucket-옵션을-추가">2. Project 의 serverless.yml 에 deploymentBucket 옵션을 추가</h4>
+<blockquote>
+
+  <p>로컬에서 coolsms.billy.projects 라는 폴더에 serverless 예제로 사용할 Project 를 4개를</p>
+  <pre><code>sls create -t aws-nodejs -n testProject1 -p ./testProject1
+sls create -t aws-nodejs -n testProject2 -p ./testProject2
+sls create -t aws-nodejs -n testProject3 -p ./testProject3
+sls create -t aws-nodejs -n testProject4 -p ./testProject4
+</code></pre>
+  <p>을 사용하여 생성합니다.</p>
+
+  <p><img src="/images/serverless_deploy/create_projects.png" alt="serverless작업폴더생성" title="serverless작업폴더생성" /></p>
+
+  <p>생성된 폴더 안에는 serverless 기본 템플릿 파일들이 구성되어있습니다. 
+<img src="/images/serverless_deploy/ls_projects.png" alt="serverless작업폴더생성" title="serverless작업폴더생성" /></p>
+
+  <p>각각의 폴더안에 있는 serverless.yml 을 열어서 아래와 같이 deploymentBucket 을 추가합니다.</p>
+  <pre><code>service: testProject1
+provider:
+  name: aws
+  region: ap-northeast-2
+  runtime: nodejs4.3
+  deploymentBucket: coolsms.billy.projects
+functions:
+  hello:
+    handler: handler.hello
+</code></pre>
+</blockquote>
+
+<h4 id="3-sls-deploy-1">3. sls deploy</h4>
+<blockquote>
+
+  <p>각각의 test 프로젝트를 sls deploy 해줍니다. 
+<img src="/images/serverless_deploy/sls_deploy.png" alt="slsdeploy" title="sls_deploy" /></p>
+</blockquote>
+
+<h4 id="4-배포확인">4. 배포확인.</h4>
+<blockquote>
+
+  <p>S3 의 “coolsms.billy.projects” 버킷으로 가서 배포한 serverless projects 들이 잘 들어가있는지 확인합니다.</p>
+
+  <p><img src="/images/serverless_deploy/s3_deploy.png" alt="s3_deploy" title="s3_deploy" /></p>
+
+  <p>상단의 Amazon S3 &gt; coolsms.billy.projects &gt; serverless  폴더에 testProject1 ~ testProject4 까지 잘 배포되었네요.</p>
+</blockquote>
 
             </div>
         </article>
@@ -120,15 +184,15 @@
         <div class="cf"></div>
         <div class="row text-center">
             <section class="notepad-post-share">
-                <a class="twitter-icon" href="https://twitter.com/intent/tweet?text=&quot;테스트 포스트&quot;%20http://localhost:4000/articles/testing_post%20via%20&#64;"
+                <a class="twitter-icon" href="https://twitter.com/intent/tweet?text=&quot;Serverless deploy를 특정 버킷에 배포하기&quot;%20http://localhost:4000/serverless/serverless-deploy-to-specific-s3%20via%20&#64;"
                     onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;" title="Share on Twitter">
                     <i class="fa fa-twitter"></i>
                 </a>
-                <a class="facebook-icon" href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:4000/articles/testing_post"
+                <a class="facebook-icon" href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:4000/serverless/serverless-deploy-to-specific-s3"
                     onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;" title="Share on Facebook">
                     <i class="fa fa-facebook"></i>
                 </a>
-                <a class="google-icon" href="https://plus.google.com/share?url=http://localhost:4000/articles/testing_post"
+                <a class="google-icon" href="https://plus.google.com/share?url=http://localhost:4000/serverless/serverless-deploy-to-specific-s3"
                    onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;" title="Share on Google+">
                     <i class="fa fa-google-plus"></i>
                 </a>
