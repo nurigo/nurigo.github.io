@@ -1,7 +1,7 @@
 ---
 layout: post
-title: 트래비스에서 npm prviate modules 사용하기
-description: "description"
+title: Travis-CI와 Prviate NPM 모듈을 사용한 테스트 자동화
+description: "Travis-CI에서 테스트 스크립트가 담긴 Private NPM 모듈을 다운받아 테스트를 자동화 해봅시다"
 date: 2017-08-09 16:45
 author: wiley
 category: [tips]
