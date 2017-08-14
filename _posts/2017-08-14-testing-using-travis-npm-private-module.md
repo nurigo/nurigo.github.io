@@ -16,7 +16,7 @@ display: true
 before_install 섹션에 .npmrc 파일을 만들어주도록 합니다. ${NPM_TOKEN}은 Travis-CI의 Settings 에서 환경변수로 추가해 줍니다.
 
 
->![환경변수](/images/travis_settings.png)
+>![환경변수](/images/travis-settings.png)
 
 NPM_TOKEN 값은 자신의 PC 계정에 이미 생성된 .npmrc 파일을 열어보면 알 수 있습니다.
 
