@@ -3,7 +3,7 @@ layout: post
 title: 트래비스에서 npm prviate modules 사용하기
 description: "description"
 date: 2017-08-09 16:45
-author: Wiley
+author: wiley
 category: [tips]
 tags: [npm, travis, ci]
 comments: true
