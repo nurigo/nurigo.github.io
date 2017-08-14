@@ -23,7 +23,7 @@ NPM_TOKEN 값은 자신의 PC 계정에 이미 생성된 .npmrc 파일을 열어
 > cat ~/.npmrc
 
 
-```
+```yml
 language: node_js
 
 node_js:
