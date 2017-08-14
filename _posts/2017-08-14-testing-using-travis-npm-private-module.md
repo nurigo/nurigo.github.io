@@ -1,9 +1,9 @@
 ---
 layout: post
-title: 트래비스에서 npm prviate modules 사용하기
-description: "description"
+title: Travis-CI와 Prviate NPM 모듈을 사용한 테스트 자동화
+description: Travis-CI에서 테스트 스크립트가 담긴 Private NPM 모듈을 다운받아 테스트를 자동화 해봅시다
 date: 2017-08-09 16:45
-author: Wiley
+author: wiley
 category: [tips]
 tags: [npm, travis, ci]
 comments: true
@@ -15,7 +15,7 @@ display: true
 
 아래는 @nurigo/api-test 라는 패키지로 올린 경우  .travis.yml 파일의 설정 예입니다.
 
-```
+```yml
 language: node_js
 
 node_js:
@@ -33,7 +33,7 @@ before_install 섹션에 .npmrc 파일에 인증정보를 쓰는 명령을 추�
 
 Travis-CI의 Settings 에서 환경변수로 추가해주어 ${NPM_TOKEN}에 넘겨줄 수 있습니다.
 
->![환경변수](/images/travis_settings.png)
+>![환경변수](/images/travis-settings.png)
 
 NPM_TOKEN 값은 자신의 PC 계정에 이미 생성된 .npmrc 파일을 열어보면 알 수 있습니다.
 
