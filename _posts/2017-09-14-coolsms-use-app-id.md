@@ -8,7 +8,7 @@ category: [tips]
 tags: [npm, travis, ci]
 comments: true
 share: true
-display: true
+display: false
 ---
 
 회사에서 프로젝트를 하다보면 Public으로 진행하기에는 노출되어서는 안되는 정보가 포함되는 경우 NPM의 Private 모듈을 배포하고 이를 Travis-CI에서 테스트 진행시 다운로드 받아 사용하도록 설정해 줄 수 있습니다.
